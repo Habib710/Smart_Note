@@ -2,8 +2,13 @@ import streamlit as st
 from PIL import Image
 from backend import extract_text, summarize_text, revise_text, load_summarizer, load_reviser
 
-# Set up Streamlit page
-st.set_page_config(page_title="Smart Note",  layout="wide")
+# Remove default Streamlit header
+
+st.set_page_config(page_title="Smart Note", page_icon="🏡", layout="wide")
+
+# Add more Streamlit code here...
+
+
 
 with open('css/style.css', 'r') as f:
     css = f.read()
@@ -41,31 +46,17 @@ st.markdown(
 
 
 # Navigation Buttons in the Main Content Area
-st.markdown("###")
-col1, col2, col3, col4,col5 = st.columns(5)
 
-with col1:
-    if st.button("📷 Take Picture"):
-        st.write("Take Picture Content")
-
-with col2:
-    if st.button("⚙️ Quiz Generator"):
-        st.write("Quiz Generator Content")
-
-with col3:
-    if st.button("🎨 Drawing Board"):
-        st.write("Drawing Board Content")
-
-with col4:
-    if st.button("🤖 AI Assistance"):
-        st.write("AI Assistance Content")
-
-
-
-with col5:
-    if st.button(" Courses"):
-        st.write("Contacts Content")
-
+st.markdown(
+    """
+    <div class="navigation-buttons">
+        <button class="nav-button">📷 Take Picture</button>
+        <button class="nav-button">⚙️ Quiz Generator</button>
+        <button class="nav-button">🎨 Drawing Board</button>
+        <button class="nav-button">🤖 AI Assistance</button>
+        <button class="nav-button">Courses</button>
+    </div>
+    """, unsafe_allow_html=True)
 
 
 # Recently Added Section (Only Two Items)
