@@ -83,33 +83,66 @@ body {
 
 /* Navigation Buttons */
 /* Navigation Buttons */
+/**
+.navigation-buttons{
+  
+
+    justify-content: center;
+   margin-bottom: 0px;
+    padding: 40px;
+    border-radius: 7px;
+    background-color:rgb(100, 117, 102) ;
+}
+**/
+/* Navigation Container */
+.nav-container {
+    background-color: #0d3d09;  /* Red background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+/* Navigation Buttons */
 .navigation-buttons {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center buttons horizontally */
-    gap: 10px; /* Space between buttons */
-    margin-bottom: 0px;
-    padding: 40px;
-    border-radius: 7px;
-    background-color:rgb(21, 48, 24) ;
+    gap: 15px;
+    justify-content: center;
+   
 }
 
 .nav-button {
-    flex: 1 1 calc(20% - 10px); /* Each button takes equal width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: rgb(32, 114, 11);
+    color: #f3f3f3 !important;
+    
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    flex: 1;
+   text-decoration: none !important ;
+    min-width: 200px;
+    max-width: 250px;
     text-align: center;
-    padding: 15px ;
-    border-radius: 15px;
-    background-color: #2e913b;
-    border: 1px solid #1f351f;
-    color: #f7f7f7;
-    font-size: 22px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .nav-button:hover {
-    background-color: #e0e0e0;
+    background-color: #4f574f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
+.nav-button i {
+    font-size: 18px;
+}
+
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
