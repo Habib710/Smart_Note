@@ -1,11 +1,3 @@
-import streamlit as st
-from Components import load_css, header, navigation
+from common import load_layout
 
-# Initialize
-load_css()
-header()
-navigation()
-
-# Page-specific content
-st.markdown("## AI Assistance")
-st.markdown("Your AI tools go here...")
+load_layout()
